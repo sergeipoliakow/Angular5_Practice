@@ -1,0 +1,11 @@
+D:\Users\Serg\Documents\Angular5_Practice\Demo\Demo\bin\Debug\netcoreapp2.0\Demo.deps.json
+D:\Users\Serg\Documents\Angular5_Practice\Demo\Demo\bin\Debug\netcoreapp2.0\Demo.runtimeconfig.json
+D:\Users\Serg\Documents\Angular5_Practice\Demo\Demo\bin\Debug\netcoreapp2.0\Demo.runtimeconfig.dev.json
+D:\Users\Serg\Documents\Angular5_Practice\Demo\Demo\bin\Debug\netcoreapp2.0\Demo.dll
+D:\Users\Serg\Documents\Angular5_Practice\Demo\Demo\bin\Debug\netcoreapp2.0\Demo.pdb
+D:\Users\Serg\Documents\Angular5_Practice\Demo\Demo\obj\Debug\netcoreapp2.0\Demo.csprojResolveAssemblyReference.cache
+D:\Users\Serg\Documents\Angular5_Practice\Demo\Demo\obj\Debug\netcoreapp2.0\Demo.csproj.CoreCompileInputs.cache
+D:\Users\Serg\Documents\Angular5_Practice\Demo\Demo\obj\Debug\netcoreapp2.0\Demo.AssemblyInfoInputs.cache
+D:\Users\Serg\Documents\Angular5_Practice\Demo\Demo\obj\Debug\netcoreapp2.0\Demo.AssemblyInfo.cs
+D:\Users\Serg\Documents\Angular5_Practice\Demo\Demo\obj\Debug\netcoreapp2.0\Demo.dll
+D:\Users\Serg\Documents\Angular5_Practice\Demo\Demo\obj\Debug\netcoreapp2.0\Demo.pdb

@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptToolsVersion>2.6</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\AutoConfigurator\AutoConfigurator.component.ts" />
+    <None Remove="ClientApp\AutoConfigurator\AutoConfigurator.module.ts" />
+    <None Remove="ClientApp\AutoConfigurator\Brand.ts" />
+    <None Remove="ClientApp\AutoConfigurator\data.service.ts" />
+    <None Remove="ClientApp\AutoConfigurator\engine.ts" />
+    <None Remove="ClientApp\AutoConfigurator\engineOfModel.ts" />
+    <None Remove="ClientApp\AutoConfigurator\model.ts" />
+    <None Remove="ClientApp\AutoConfigurator\ModelSelector\data.service.ts" />
+    <None Remove="ClientApp\AutoConfigurator\ModelSelector\ModelSelector.component.ts" />
+    <None Remove="ClientApp\AutoConfigurator\ModelSelector\ModelSelector.module.ts" />
+    <None Remove="ClientApp\AutoConfigurator\models\car.ts" />
+    <None Remove="ClientApp\AutoConfigurator\models\dictionary.ts" />
+    <None Remove="ClientApp\AutoConfigurator\models\optionsOfCar.ts" />
+    <None Remove="ClientApp\AutoConfigurator\models\viewModels\ModelSelectorViewModel.ts" />
+    <None Remove="ClientApp\AutoConfigurator\option.ts" />
+    <None Remove="ClientApp\AutoConfigurator\suspension.ts" />
+    <None Remove="ClientApp\AutoConfigurator\transmission.ts" />
+    <None Remove="ClientApp\main.ts" />
+    <None Remove="ClientApp\polyfills.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Styles\indexStyles.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\AutoConfigurator.component.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\AutoConfigurator.module.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\ModelSelector\data.service.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\ModelSelector\ModelSelector.component.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\ModelSelector\ModelSelector.module.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\brand.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\data.service.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\car.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\dictionary.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\engine.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\engineOfModel.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\model.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\option.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\optionsOfCar.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\suspension.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\transmission.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\viewModels\ModelSelectorViewModel.ts" />
+    <TypeScriptCompile Include="ClientApp\main.ts" />
+    <TypeScriptCompile Include="ClientApp\polyfills.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\imgs\Aston Martin\Vanquish\" />
+    <Folder Include="wwwroot\imgs\BMW\5\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,26 @@
+﻿div.menu {
+    background-color: black;
+    border-style: solid;
+    border-color:whitesmoke;
+    border-radius:10px;
+}
+div.menu tr {
+}
+div.menu td {
+    padding: 10px 10px 10px 10px;
+}
+
+div.menu td:hover {
+    padding: 10px 10px 10px 10px;
+    background-color:slategrey;
+}
+
+div.menu a {
+    color: mintcream;
+    text-decoration: none;
+}
+
+img.carImg{
+    max-width:80%;
+    max-height:40%;
+}

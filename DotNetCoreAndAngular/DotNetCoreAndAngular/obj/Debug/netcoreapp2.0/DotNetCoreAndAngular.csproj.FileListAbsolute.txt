@@ -1,0 +1,14 @@
+D:\Users\Serg\Documents\Angular5_Practice\DotNetCoreAndAngular\DotNetCoreAndAngular\bin\Debug\netcoreapp2.0\DotNetCoreAndAngular.deps.json
+D:\Users\Serg\Documents\Angular5_Practice\DotNetCoreAndAngular\DotNetCoreAndAngular\bin\Debug\netcoreapp2.0\DotNetCoreAndAngular.runtimeconfig.json
+D:\Users\Serg\Documents\Angular5_Practice\DotNetCoreAndAngular\DotNetCoreAndAngular\bin\Debug\netcoreapp2.0\DotNetCoreAndAngular.runtimeconfig.dev.json
+D:\Users\Serg\Documents\Angular5_Practice\DotNetCoreAndAngular\DotNetCoreAndAngular\bin\Debug\netcoreapp2.0\DotNetCoreAndAngular.dll
+D:\Users\Serg\Documents\Angular5_Practice\DotNetCoreAndAngular\DotNetCoreAndAngular\bin\Debug\netcoreapp2.0\DotNetCoreAndAngular.pdb
+D:\Users\Serg\Documents\Angular5_Practice\DotNetCoreAndAngular\DotNetCoreAndAngular\obj\Debug\netcoreapp2.0\DotNetCoreAndAngular.csprojResolveAssemblyReference.cache
+D:\Users\Serg\Documents\Angular5_Practice\DotNetCoreAndAngular\DotNetCoreAndAngular\obj\Debug\netcoreapp2.0\DotNetCoreAndAngular.csproj.CoreCompileInputs.cache
+D:\Users\Serg\Documents\Angular5_Practice\DotNetCoreAndAngular\DotNetCoreAndAngular\obj\Debug\netcoreapp2.0\DotNetCoreAndAngular.AssemblyInfoInputs.cache
+D:\Users\Serg\Documents\Angular5_Practice\DotNetCoreAndAngular\DotNetCoreAndAngular\obj\Debug\netcoreapp2.0\DotNetCoreAndAngular.AssemblyInfo.cs
+D:\Users\Serg\Documents\Angular5_Practice\DotNetCoreAndAngular\DotNetCoreAndAngular\obj\Debug\netcoreapp2.0\DotNetCoreAndAngular.dll
+D:\Users\Serg\Documents\Angular5_Practice\DotNetCoreAndAngular\DotNetCoreAndAngular\obj\Debug\netcoreapp2.0\DotNetCoreAndAngular.pdb
+D:\Users\Serg\Documents\Angular5_Practice\DotNetCoreAndAngular\DotNetCoreAndAngular\obj\Debug\netcoreapp2.0\DotNetCoreAndAngular.Properties.Resources.resources
+D:\Users\Serg\Documents\Angular5_Practice\DotNetCoreAndAngular\DotNetCoreAndAngular\obj\Debug\netcoreapp2.0\DotNetCoreAndAngular.csproj.GenerateResource.cache
+D:\Users\Serg\Documents\Angular5_Practice\DotNetCoreAndAngular\DotNetCoreAndAngular\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

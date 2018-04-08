@@ -1,0 +1,48 @@
+﻿<style>
+    .selected {
+        background-color: chartreuse;
+    }
+</style>
+
+<h1>Курс валют</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Название</td>
+            <td>Курс</td>
+            <td>Обозначение</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of currencies">
+            <ng-template [ngIf]="currency?.id != c.id" [ngIfElse]="edit">
+                <td [ngClass]="{'selected':c.id==selectedCurrency.id}">{{c?.name}}</td>
+                <td [ngClass]="{'selected':c.id==selectedCurrency.id}">{{c?.rate | number : '1.2-2'}}</td>
+                <td [ngClass]="{'selected':c.id==selectedCurrency.id}">{{c?.caption}}</td>
+                <td [ngClass]="{'selected':c.id==selectedCurrency.id}">
+                    <button class="btn btn-sm btn-primary" (click)="editCurrency(c)">Изменить</button>
+                    <button class="btn btn-sm btn-danger" (click)="selectCurrency(c)">Выбрать</button>
+                </td>
+            </ng-template>
+        </tr>
+    </tbody>
+</table>
+{{selectedCurrency.id}}
+
+<!--шаблон для редактирования-->
+<ng-template #edit>
+    <td>
+        <input type="text" [(ngModel)]="currency.name" class="form-control" />
+    </td>
+    <td>
+        <input type="text" [(ngModel)]="currency.rate" class="form-control" />
+    </td>
+    <td>
+        <input type="text" [(ngModel)]="currency.caption" class="form-control" />
+    </td>
+    <td>
+        <input type="button" value="Сохранить" (click)="save()" class="btn btn-sm btn-success" />
+        <input type="button" value="Отмена" (click)="cancel()" class="btn btn-sm btn-warning" />
+    </td>
+</ng-template>

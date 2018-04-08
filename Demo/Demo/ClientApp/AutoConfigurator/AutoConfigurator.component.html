@@ -1,0 +1,11 @@
+﻿<ModelSelector (modelSelectedEvent)="selectedModelMessage($event)" (brandSelectedEvent)="selectedBrandMessage($event)"></ModelSelector>
+<select name="colorSelect" [(ngModel)]="selectedColor" (ngModelChange)="setImgSrc()">
+    <option *ngFor="let color of colors" [value]="color">
+        {{color}}
+    </option>
+</select>
+
+{{selectedBrand.name}}
+{{selectedModel.name}} <br />
+
+<img src="{{imgSrc}}" class="carImg" />

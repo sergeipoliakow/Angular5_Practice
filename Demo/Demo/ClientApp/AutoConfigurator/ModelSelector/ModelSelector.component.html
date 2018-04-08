@@ -1,0 +1,29 @@
+﻿<h1>Выберите модель</h1>
+<table>
+    <tr>
+        <td>
+            Марка
+        </td>
+        <td>
+            Модель
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select  name="brandsSelect" [(ngModel)]="selectedBrandId" (ngModelChange)="brandSelected()">
+                <option [value]="null" disabled selected>Выберите марку</option>
+                <option *ngFor="let brand of brands" [value]="brand.id">
+                    {{brand.name}}
+                </option>
+            </select>
+        </td>
+        <td>
+            <select name="modelsSelect" [(ngModel)]="selectedModelId" (ngModelChange)="modelSelected()">
+                <option [value]="null" disabled selected>Выберите модель</option>
+                <option *ngFor="let m of modelsOfSelectedBrand" [value]="m.id">
+                    {{m.name}}
+                </option>
+            </select>
+        </td>
+    </tr>
+</table>
