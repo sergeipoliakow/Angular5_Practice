@@ -1,46 +1,63 @@
-﻿<table>
-    <tr>
-        <td>
-            <ModelSelector (modelSelectedEvent)="selectedModelMessage($event)" (brandSelectedEvent)="selectedBrandMessage($event)"></ModelSelector>
-        </td>
-        <td *ngIf="selectedModel.name != undefined">
-            <table>
-                <tr>
-                    <td>
-                        Цвет
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <select name="colorSelect" [(ngModel)]="selectedColor" (ngModelChange)="colorSelected()">
-                            <option [value]="null" disabled selected>Выберите цвет</option>
-                            <option *ngFor="let color of colors" [value]="color">
-                                {{color}}
-                            </option>
-                        </select>
-                    </td>
-                </tr>
-            </table>
-        </td>
-        <td>
-            <EngineSelector *ngIf="selectedModel.name != undefined" (engineSelectedEvent)="selectedEngineMessage($event)" [selectedModel]="selectedModel"></EngineSelector>
-        </td>
-        <td>
-            <SuspensionSelector *ngIf="selectedModel.name != undefined" (suspensionSelectedEvent)="selectedSuspensionMessage($event)"></SuspensionSelector>
-        </td>
-        <td>
-            <TransmissionSelector *ngIf="selectedModel.name != undefined" (transmissionSelectedEvent)="selectedTransmissionMessage($event)"></TransmissionSelector>
-        </td>
+﻿<div class="menu">
+    <table class="menu">
+        <tr>
+            <td>
+                <input type="button" value="Aвто-конфигуратор" (click)="configuratorMode()" style="background-color:transparent;width:100%;height:100%; border-style:none; color:azure"/>
+            </td>
+            <td>
+                <input type="button" value="Готовые автомобили" (click)="viewMode()" style="background-color:transparent;width:100%;height:100%; border-style:none; color:azure" />
+            </td>
+        </tr>
+    </table>
+</div>
+<div *ngIf="!mode">
+    <table>
+        <tr>
+            <td>
+                <ModelSelector (modelSelectedEvent)="selectedModelMessage($event)" (brandSelectedEvent)="selectedBrandMessage($event)"></ModelSelector>
+            </td>
+            <td *ngIf="selectedModel.name != undefined">
+                <table>
+                    <tr>
+                        <td>
+                            Цвет
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="colorSelect" [(ngModel)]="selectedColor" (ngModelChange)="colorSelected()">
+                                <option [value]="null" disabled selected>Выберите цвет</option>
+                                <option *ngFor="let color of colors" [value]="color">
+                                    {{color}}
+                                </option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <EngineSelector *ngIf="selectedModel.name != undefined" (engineSelectedEvent)="selectedEngineMessage($event)" [selectedModel]="selectedModel"></EngineSelector>
+            </td>
+            <td>
+                <SuspensionSelector *ngIf="selectedModel.name != undefined" (suspensionSelectedEvent)="selectedSuspensionMessage($event)"></SuspensionSelector>
+            </td>
+            <td>
+                <TransmissionSelector *ngIf="selectedModel.name != undefined" (transmissionSelectedEvent)="selectedTransmissionMessage($event)"></TransmissionSelector>
+            </td>
 
-</table>
-<br />
-<p *ngIf="cost>0">
-    Цена: {{cost| number}} руб.
-</p>
+    </table>
+    <br />
+    <p *ngIf="cost>0">
+        Цена: {{cost| number}} руб.
+    </p>
 
-<input *ngIf="selectedModel.name != undefined && selectedColor!=null && selectedEngine.name!!=undefined && selectedTransmission.name!!=undefined && selectedSuspension.name!!=undefined" type="button" value="Сохранить" (click)="save()" />
+    <input *ngIf="selectedModel.name != undefined && selectedColor!=null && selectedEngine.name!!=undefined && selectedTransmission.name!!=undefined && selectedSuspension.name!!=undefined" type="button" value="Сохранить" (click)="save()" />
 
-<br />
+    <br />
 
-<img *ngIf="selectedModel.name != undefined && selectedColor!=null" src="{{imgSrc}}" class="carImg" />
-<img *ngIf="selectedModel.name == undefined || selectedColor==null" src="/imgs/cars/defaultCar.png" class="carImg" />
+    <img *ngIf="selectedModel.name != undefined && selectedColor!=null" src="{{imgSrc}}" class="carImg" />
+    <img *ngIf="selectedModel.name == undefined || selectedColor==null" src="/imgs/cars/defaultCar.png" class="carImg" />
+</div>
+<div *ngIf="mode">
+    <CreatedCars></CreatedCars>
+</div>

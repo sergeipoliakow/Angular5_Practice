@@ -7,9 +7,10 @@ import { ModelSelectorComponent } from './ModelSelector/ModelSelector.component'
 import { EngineSelectorComponent } from './EngineSelector/EngineSelector.component';
 import { SuspensionSelectorComponent } from './SuspensionSelector/SuspensionSelector.component';
 import { TransmissionSelectorComponent } from './TransmissionSelector/TransmissionSelector.component';
+import { CreatedCarsComponent } from './CreatedCarsApp/CreatedCars.component';
 @NgModule({
     imports: [BrowserModule, FormsModule, HttpClientModule],
-    declarations: [AutoConfiguratorComponent, ModelSelectorComponent, EngineSelectorComponent, SuspensionSelectorComponent, TransmissionSelectorComponent],
+    declarations: [AutoConfiguratorComponent, ModelSelectorComponent, EngineSelectorComponent, SuspensionSelectorComponent, TransmissionSelectorComponent, CreatedCarsComponent],
     bootstrap: [AutoConfiguratorComponent]
 })
 export class AutoConfiguratorModule { }

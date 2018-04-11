@@ -22,4 +22,10 @@ namespace Demo.Models.ViewModels
             public float Cost { get; set; }
 
     }
+
+    public class CreatedCarViewModel
+    {
+        public string BrandName { get; set; }
+        public string ModelName { get; set; }
+    }
 }

@@ -7,9 +7,9 @@ if (module.hot) {
     module.hot.accept();
     module.hot.dispose(function () {
         // Перед перезапуском приложения создаем новый элемент app, которым заменяем старый
-        var oldRootElem = document.querySelector('AutoConfigurator');
-        var newRootElem = document.createElement('AutoConfigurator');
-        oldRootElem.parentNode.insertBefore(newRootElem, oldRootElem);
+        var oldRootElemAutoConfigurator = document.querySelector('AutoConfigurator');
+        var newRootElemAutoConfigurator = document.createElement('AutoConfigurator');
+        oldRootElemAutoConfigurator.parentNode.insertBefore(newRootElemAutoConfigurator, oldRootElemAutoConfigurator);
         platform.destroy();
     });
 }

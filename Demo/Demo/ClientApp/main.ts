@@ -8,9 +8,9 @@ if (module.hot) {
     module.hot.accept();
     module.hot.dispose(() => {
         // Перед перезапуском приложения создаем новый элемент app, которым заменяем старый
-        const oldRootElem = document.querySelector('AutoConfigurator');
-        const newRootElem = document.createElement('AutoConfigurator');
-        oldRootElem!.parentNode!.insertBefore(newRootElem, oldRootElem);
+        const oldRootElemAutoConfigurator = document.querySelector('AutoConfigurator');
+        const newRootElemAutoConfigurator = document.createElement('AutoConfigurator');
+        oldRootElemAutoConfigurator!.parentNode!.insertBefore(newRootElemAutoConfigurator, oldRootElemAutoConfigurator);
         platform.destroy();
     });
 }

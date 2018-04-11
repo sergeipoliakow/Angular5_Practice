@@ -15,6 +15,7 @@ import { Transmission } from './models/transmission';
     providers:[DataService]
 })
 export class AutoConfiguratorComponent implements OnInit {
+    mode: boolean = false;
     selectedColor: string = null;
     colors: string[];
     selectedModel: Model = new Model();
@@ -79,6 +80,14 @@ export class AutoConfiguratorComponent implements OnInit {
 
     CalculateCost() {
         this.cost = this.selectedModel.baseCost + this.selectedEngine.cost + this.selectedSuspension.cost + this.selectedTransmission.cost;
+    }
+
+    configuratorMode() {
+        this.mode = false;
+    }
+
+    viewMode() {
+        this.mode = true;
     }
 
 }

@@ -1,0 +1,8 @@
+﻿<div *ngFor="let car of cars">
+    <h4>{{car.model.brand.name}} {{car.model.name}}: Двигатель {{getEngineType(car)}} {{car.engine.name}} {{car.engine.power}} л.с; Трансмиссия {{car.transmission.name}}; Подвеска {{car.suspension.name}}</h4>
+    <br/>
+    <h5>{{car.cost | number}} руб.</h5>
+    <br/>
+    <img src="{{getImgsrc(car)}}" style="max-width:50%; max-height:50%;" />
+    <div style="width:100%;height:2px;background-color:darkblue"></div>
+</div>

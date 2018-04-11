@@ -18,6 +18,7 @@ import { Transmission } from './models/transmission';
 var AutoConfiguratorComponent = /** @class */ (function () {
     function AutoConfiguratorComponent(dataService) {
         this.dataService = dataService;
+        this.mode = false;
         this.selectedColor = null;
         this.selectedModel = new Model();
         this.selectedBrand = new Brand();
@@ -69,6 +70,12 @@ var AutoConfiguratorComponent = /** @class */ (function () {
     };
     AutoConfiguratorComponent.prototype.CalculateCost = function () {
         this.cost = this.selectedModel.baseCost + this.selectedEngine.cost + this.selectedSuspension.cost + this.selectedTransmission.cost;
+    };
+    AutoConfiguratorComponent.prototype.configuratorMode = function () {
+        this.mode = false;
+    };
+    AutoConfiguratorComponent.prototype.viewMode = function () {
+        this.mode = true;
     };
     AutoConfiguratorComponent = __decorate([
         Component({

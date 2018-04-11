@@ -6,10 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\AutoConfigurator\AutoConfigurator.component.ts" />
-    <None Remove="ClientApp\AutoConfigurator\AutoConfigurator.module.ts" />
     <None Remove="ClientApp\AutoConfigurator\Brand.ts" />
-    <None Remove="ClientApp\AutoConfigurator\data.service.ts" />
     <None Remove="ClientApp\AutoConfigurator\engine.ts" />
     <None Remove="ClientApp\AutoConfigurator\engineOfModel.ts" />
     <None Remove="ClientApp\AutoConfigurator\EngineSelector\data.service.ts" />
@@ -28,8 +25,9 @@
     <None Remove="ClientApp\AutoConfigurator\transmission.ts" />
     <None Remove="ClientApp\AutoConfigurator\TransmissionSelector\data.service.ts" />
     <None Remove="ClientApp\AutoConfigurator\TransmissionSelector\TransmissionSelector.component.ts" />
-    <None Remove="ClientApp\main.ts" />
-    <None Remove="ClientApp\polyfills.ts" />
+    <None Remove="ClientApp\AutoConfigurator\CreatedCarsApp\CreatedCars.component.ts" />
+    <None Remove="ClientApp\AutoConfigurator\CreatedCarsApp\CreatedCars.model.ts" />
+    <None Remove="ClientApp\AutoConfigurator\CreatedCarsApp\data.service.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -64,6 +62,9 @@
     <TypeScriptCompile Include="ClientApp\AutoConfigurator\SuspensionSelector\SuspensionSelector.component.ts" />
     <TypeScriptCompile Include="ClientApp\AutoConfigurator\TransmissionSelector\data.service.ts" />
     <TypeScriptCompile Include="ClientApp\AutoConfigurator\TransmissionSelector\TransmissionSelector.component.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\CreatedCarsApp\CreatedCars.component.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\CreatedCarsApp\CreatedCars.model.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\CreatedCarsApp\data.service.ts" />
     <TypeScriptCompile Include="ClientApp\main.ts" />
     <TypeScriptCompile Include="ClientApp\polyfills.ts" />
   </ItemGroup>
