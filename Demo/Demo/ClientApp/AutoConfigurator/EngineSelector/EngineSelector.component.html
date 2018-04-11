@@ -1,0 +1,17 @@
+﻿<table>
+    <tr>
+        <td>
+            Двигатель
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select name="engineSelect" [(ngModel)]="selectedEngineId" (ngModelChange)="engineSelected()">
+                <option [value]="null" disabled selected>Выберите двигатель</option>
+                <option *ngFor="let engine of engines" [value]="engine.id">
+                    {{engine.name}} {{types[engine.type]}} {{engine.power}} л.с.
+                </option>
+            </select>
+        </td>
+    </tr>
+</table>

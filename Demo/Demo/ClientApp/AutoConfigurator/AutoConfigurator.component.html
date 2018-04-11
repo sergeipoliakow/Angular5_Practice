@@ -1,11 +1,46 @@
-﻿<ModelSelector (modelSelectedEvent)="selectedModelMessage($event)" (brandSelectedEvent)="selectedBrandMessage($event)"></ModelSelector>
-<select name="colorSelect" [(ngModel)]="selectedColor" (ngModelChange)="setImgSrc()">
-    <option *ngFor="let color of colors" [value]="color">
-        {{color}}
-    </option>
-</select>
+﻿<table>
+    <tr>
+        <td>
+            <ModelSelector (modelSelectedEvent)="selectedModelMessage($event)" (brandSelectedEvent)="selectedBrandMessage($event)"></ModelSelector>
+        </td>
+        <td *ngIf="selectedModel.name != undefined">
+            <table>
+                <tr>
+                    <td>
+                        Цвет
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="colorSelect" [(ngModel)]="selectedColor" (ngModelChange)="colorSelected()">
+                            <option [value]="null" disabled selected>Выберите цвет</option>
+                            <option *ngFor="let color of colors" [value]="color">
+                                {{color}}
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <EngineSelector *ngIf="selectedModel.name != undefined" (engineSelectedEvent)="selectedEngineMessage($event)" [selectedModel]="selectedModel"></EngineSelector>
+        </td>
+        <td>
+            <SuspensionSelector *ngIf="selectedModel.name != undefined" (suspensionSelectedEvent)="selectedSuspensionMessage($event)"></SuspensionSelector>
+        </td>
+        <td>
+            <TransmissionSelector *ngIf="selectedModel.name != undefined" (transmissionSelectedEvent)="selectedTransmissionMessage($event)"></TransmissionSelector>
+        </td>
 
-{{selectedBrand.name}}
-{{selectedModel.name}} <br />
+</table>
+<br />
+<p *ngIf="cost>0">
+    Цена: {{cost| number}} руб.
+</p>
 
-<img src="{{imgSrc}}" class="carImg" />
+<input *ngIf="selectedModel.name != undefined && selectedColor!=null && selectedEngine.name!!=undefined && selectedTransmission.name!!=undefined && selectedSuspension.name!!=undefined" type="button" value="Сохранить" (click)="save()" />
+
+<br />
+
+<img *ngIf="selectedModel.name != undefined && selectedColor!=null" src="{{imgSrc}}" class="carImg" />
+<img *ngIf="selectedModel.name == undefined || selectedColor==null" src="/imgs/cars/defaultCar.png" class="carImg" />

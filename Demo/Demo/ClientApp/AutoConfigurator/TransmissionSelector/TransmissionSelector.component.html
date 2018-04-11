@@ -1,0 +1,17 @@
+﻿<table>
+    <tr>
+        <td>
+            Трансмиссия
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select name="transmissioneSelect" [(ngModel)]="selectedTransmissionId" (ngModelChange)="transmissionSelected()">
+                <option [value]="null" disabled selected>Выберите коробку передач</option>
+                <option *ngFor="let transmission of transmissions" [value]="transmission.id">
+                    {{transmission.name}}
+                </option>
+            </select>
+        </td>
+    </tr>
+</table>

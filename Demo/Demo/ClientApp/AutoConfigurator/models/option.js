@@ -4,6 +4,7 @@ var Option = /** @class */ (function () {
         this.name = name;
         this.caption = caption;
         this.cost = cost;
+        this.cost = 0;
     }
     return Option;
 }());

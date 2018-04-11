@@ -2,6 +2,7 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Demo.Models;
+using Demo.Models.ViewModels;
 
 namespace Demo.Controllers
 {
@@ -22,7 +23,12 @@ namespace Demo.Controllers
 
             if (!db.Engines.Any())
             {
-                db.Engines.Add(new Engine { Name = "B48B20", Brand = (from a in db.Brands where a.Name.Equals("BMW") select a).FirstOrDefault(), Power = 184, Type = EngineType.Petrol, Cost = 200000 });                db.SaveChanges();
+                db.Engines.Add(new Engine { Name = "B48B20", Brand = (from a in db.Brands where a.Name.Equals("BMW") select a).FirstOrDefault(), Power = 184, Type = EngineType.Petrol, Cost = 200000 });
+                db.Engines.Add(new Engine { Name = "B58B30", Brand = (from a in db.Brands where a.Name.Equals("BMW") select a).FirstOrDefault(), Power = 340, Type = EngineType.Petrol, Cost = 220000 });
+                db.Engines.Add(new Engine { Name = "B57D30", Brand = (from a in db.Brands where a.Name.Equals("BMW") select a).FirstOrDefault(), Power = 400, Type = EngineType.Diesel, Cost = 215000 });
+                db.Engines.Add(new Engine { Name = "AM11", Brand = (from a in db.Brands where a.Name.Equals("Aston Martin") select a).FirstOrDefault(), Power = 565, Type = EngineType.Petrol, Cost = 190000 });
+                db.Engines.Add(new Engine { Name = "AM29", Brand = (from a in db.Brands where a.Name.Equals("Aston Martin") select a).FirstOrDefault(), Power = 568, Type = EngineType.Petrol, Cost = 210000 });
+                db.SaveChanges();
             }
 
             if (!db.Models.Any())
@@ -35,6 +41,10 @@ namespace Demo.Controllers
             if (!db.EngineOfModels.Any())
             {
                 db.EngineOfModels.Add(new EngineOfModel { Engine = (from a in db.Engines where a.Name.Equals("B48B20") select a).FirstOrDefault(), Model = (from a in db.Models where a.Name.Equals("5") && a.Brand.Name.Equals("BMW") select a).FirstOrDefault() });
+                db.EngineOfModels.Add(new EngineOfModel { Engine = (from a in db.Engines where a.Name.Equals("B58B30") select a).FirstOrDefault(), Model = (from a in db.Models where a.Name.Equals("5") && a.Brand.Name.Equals("BMW") select a).FirstOrDefault() });
+                db.EngineOfModels.Add(new EngineOfModel { Engine = (from a in db.Engines where a.Name.Equals("B57D30") select a).FirstOrDefault(), Model = (from a in db.Models where a.Name.Equals("5") && a.Brand.Name.Equals("BMW") select a).FirstOrDefault() });
+                db.EngineOfModels.Add(new EngineOfModel { Engine = (from a in db.Engines where a.Name.Equals("AM11") select a).FirstOrDefault(), Model = (from a in db.Models where a.Name.Equals("Vanquish") && a.Brand.Name.Equals("Aston Martin") select a).FirstOrDefault() });
+                db.EngineOfModels.Add(new EngineOfModel { Engine = (from a in db.Engines where a.Name.Equals("AM29") select a).FirstOrDefault(), Model = (from a in db.Models where a.Name.Equals("Vanquish") && a.Brand.Name.Equals("Aston Martin") select a).FirstOrDefault() });
                 db.SaveChanges();
             }
 
@@ -68,10 +78,25 @@ namespace Demo.Controllers
 
         }
 
-        [HttpGet]
-        public IEnumerable<Model> Get()
+        [HttpPost]
+        public IActionResult Post([FromBody] CarViewModel car)
         {
-            return db.Models.ToList();
+            if (ModelState.IsValid)
+            {
+                Car buf = new Car()
+                {
+                    ModelId = car.ModelId,
+                    EngineId = car.EngineId,
+                    TransmissionId = car.TransmissionId,
+                    SuspensionId = car.SuspensionId,
+                    Color = car.Color,
+                    Cost = car.Cost,
+                };
+                db.Cars.Add(buf);
+                db.SaveChanges();
+                return Ok(car);
+            }
+            return BadRequest(car);
         }
 
     }

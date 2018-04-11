@@ -1,16 +1,15 @@
-﻿<h1>Выберите модель</h1>
-<table>
+﻿<table>
     <tr>
         <td>
             Марка
         </td>
-        <td>
+        <td *ngIf="selectedBrandId!=null">
             Модель
         </td>
     </tr>
     <tr>
         <td>
-            <select  name="brandsSelect" [(ngModel)]="selectedBrandId" (ngModelChange)="brandSelected()">
+            <select name="brandsSelect" [(ngModel)]="selectedBrandId" (ngModelChange)="brandSelected()">
                 <option [value]="null" disabled selected>Выберите марку</option>
                 <option *ngFor="let brand of brands" [value]="brand.id">
                     {{brand.name}}
@@ -18,12 +17,15 @@
             </select>
         </td>
         <td>
-            <select name="modelsSelect" [(ngModel)]="selectedModelId" (ngModelChange)="modelSelected()">
+            <select *ngIf="selectedBrandId!=null" name="modelsSelect" [(ngModel)]="selectedModelId" (ngModelChange)="modelSelected()">
                 <option [value]="null" disabled selected>Выберите модель</option>
                 <option *ngFor="let m of modelsOfSelectedBrand" [value]="m.id">
                     {{m.name}}
                 </option>
             </select>
+
         </td>
     </tr>
 </table>
+
+

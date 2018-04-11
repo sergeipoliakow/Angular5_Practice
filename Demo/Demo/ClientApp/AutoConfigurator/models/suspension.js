@@ -3,6 +3,7 @@ var Suspension = /** @class */ (function () {
         this.id = id;
         this.name = name;
         this.cost = cost;
+        this.cost = 0;
     }
     return Suspension;
 }());

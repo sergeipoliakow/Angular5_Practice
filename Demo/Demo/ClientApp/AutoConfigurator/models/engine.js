@@ -1,9 +1,9 @@
-var EngineType;
+export var EngineType;
 (function (EngineType) {
-    EngineType[EngineType["Petrol"] = 0] = "Petrol";
-    EngineType[EngineType["Diesel"] = 1] = "Diesel";
-    EngineType[EngineType["Electric"] = 2] = "Electric";
-    EngineType[EngineType["Hybrid"] = 3] = "Hybrid";
+    EngineType[EngineType["\u0411\u0435\u043D\u0437\u0438\u043D\u043E\u0432\u044B\u0439"] = 0] = "\u0411\u0435\u043D\u0437\u0438\u043D\u043E\u0432\u044B\u0439";
+    EngineType[EngineType["\u0414\u0438\u0437\u0435\u043B\u044C\u043D\u044B\u0439"] = 1] = "\u0414\u0438\u0437\u0435\u043B\u044C\u043D\u044B\u0439";
+    EngineType[EngineType["\u042D\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u0435\u0441\u043A\u0438\u0439"] = 2] = "\u042D\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u0435\u0441\u043A\u0438\u0439";
+    EngineType[EngineType["\u0413\u0438\u0431\u0440\u0438\u0434\u043D\u044B\u0439"] = 3] = "\u0413\u0438\u0431\u0440\u0438\u0434\u043D\u044B\u0439";
 })(EngineType || (EngineType = {}));
 var Engine = /** @class */ (function () {
     function Engine(id, name, power, type, cost, brandId) {
@@ -13,6 +13,7 @@ var Engine = /** @class */ (function () {
         this.type = type;
         this.cost = cost;
         this.brandId = brandId;
+        this.cost = 0;
     }
     return Engine;
 }());

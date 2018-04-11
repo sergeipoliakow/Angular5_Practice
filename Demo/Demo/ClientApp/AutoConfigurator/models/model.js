@@ -4,6 +4,7 @@ var Model = /** @class */ (function () {
         this.name = name;
         this.baseCost = baseCost;
         this.brandId = brandId;
+        this.baseCost = 0;
     }
     return Model;
 }());

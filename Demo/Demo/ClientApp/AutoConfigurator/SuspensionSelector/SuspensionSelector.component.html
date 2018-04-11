@@ -1,0 +1,18 @@
+﻿<table>
+    <tr>
+        <td>
+            Подвеска
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select name="suspensionSelect" [(ngModel)]="selectedSuspensionId" (ngModelChange)="suspensionSelected()">
+                <option [value]="null" disabled selected>Выберите подвеску</option>
+                <option *ngFor="let suspension of suspensions" [value]="suspension.id">
+                    {{suspension.name}}
+                </option>
+            </select>
+        </td>
+    </tr>
+</table>
+

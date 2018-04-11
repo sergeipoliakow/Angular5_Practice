@@ -12,17 +12,22 @@
     <None Remove="ClientApp\AutoConfigurator\data.service.ts" />
     <None Remove="ClientApp\AutoConfigurator\engine.ts" />
     <None Remove="ClientApp\AutoConfigurator\engineOfModel.ts" />
+    <None Remove="ClientApp\AutoConfigurator\EngineSelector\data.service.ts" />
+    <None Remove="ClientApp\AutoConfigurator\EngineSelector\EngineSelector.component.ts" />
     <None Remove="ClientApp\AutoConfigurator\model.ts" />
     <None Remove="ClientApp\AutoConfigurator\ModelSelector\data.service.ts" />
     <None Remove="ClientApp\AutoConfigurator\ModelSelector\ModelSelector.component.ts" />
-    <None Remove="ClientApp\AutoConfigurator\ModelSelector\ModelSelector.module.ts" />
     <None Remove="ClientApp\AutoConfigurator\models\car.ts" />
     <None Remove="ClientApp\AutoConfigurator\models\dictionary.ts" />
     <None Remove="ClientApp\AutoConfigurator\models\optionsOfCar.ts" />
     <None Remove="ClientApp\AutoConfigurator\models\viewModels\ModelSelectorViewModel.ts" />
     <None Remove="ClientApp\AutoConfigurator\option.ts" />
     <None Remove="ClientApp\AutoConfigurator\suspension.ts" />
+    <None Remove="ClientApp\AutoConfigurator\SuspensionSelector\data.service.ts" />
+    <None Remove="ClientApp\AutoConfigurator\SuspensionSelector\SuspensionSelector.component.ts" />
     <None Remove="ClientApp\AutoConfigurator\transmission.ts" />
+    <None Remove="ClientApp\AutoConfigurator\TransmissionSelector\data.service.ts" />
+    <None Remove="ClientApp\AutoConfigurator\TransmissionSelector\TransmissionSelector.component.ts" />
     <None Remove="ClientApp\main.ts" />
     <None Remove="ClientApp\polyfills.ts" />
   </ItemGroup>
@@ -39,9 +44,10 @@
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\AutoConfigurator\AutoConfigurator.component.ts" />
     <TypeScriptCompile Include="ClientApp\AutoConfigurator\AutoConfigurator.module.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\EngineSelector\data.service.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\EngineSelector\EngineSelector.component.ts" />
     <TypeScriptCompile Include="ClientApp\AutoConfigurator\ModelSelector\data.service.ts" />
     <TypeScriptCompile Include="ClientApp\AutoConfigurator\ModelSelector\ModelSelector.component.ts" />
-    <TypeScriptCompile Include="ClientApp\AutoConfigurator\ModelSelector\ModelSelector.module.ts" />
     <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\brand.ts" />
     <TypeScriptCompile Include="ClientApp\AutoConfigurator\data.service.ts" />
     <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\car.ts" />
@@ -54,13 +60,12 @@
     <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\suspension.ts" />
     <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\transmission.ts" />
     <TypeScriptCompile Include="ClientApp\AutoConfigurator\models\viewModels\ModelSelectorViewModel.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\SuspensionSelector\data.service.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\SuspensionSelector\SuspensionSelector.component.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\TransmissionSelector\data.service.ts" />
+    <TypeScriptCompile Include="ClientApp\AutoConfigurator\TransmissionSelector\TransmissionSelector.component.ts" />
     <TypeScriptCompile Include="ClientApp\main.ts" />
     <TypeScriptCompile Include="ClientApp\polyfills.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\imgs\Aston Martin\Vanquish\" />
-    <Folder Include="wwwroot\imgs\BMW\5\" />
   </ItemGroup>
 
 </Project>

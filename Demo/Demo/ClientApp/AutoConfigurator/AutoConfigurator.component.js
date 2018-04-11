@@ -11,33 +11,64 @@ import { Component } from '@angular/core';
 import { DataService } from './data.service';
 import { Model } from './models/model';
 import { Brand } from './models/brand';
-import { Color } from './models/car';
+import { Color, Car } from './models/car';
+import { Engine } from './models/engine';
+import { Suspension } from './models/suspension';
+import { Transmission } from './models/transmission';
 var AutoConfiguratorComponent = /** @class */ (function () {
     function AutoConfiguratorComponent(dataService) {
         this.dataService = dataService;
-        this.selectedColor = "Black";
+        this.selectedColor = null;
         this.selectedModel = new Model();
         this.selectedBrand = new Brand();
+        this.selectedEngine = new Engine();
+        this.selectedSuspension = new Suspension();
+        this.selectedTransmission = new Transmission();
         this.imgSrc = "";
+        this.cost = 0;
     }
     AutoConfiguratorComponent.prototype.ngOnInit = function () {
-        this.load(); // загрузка данных при старте компонента  
+        this.setImgSrc();
         var colors = Object.keys(Color);
         this.colors = colors.slice(colors.length / 2);
     };
-    AutoConfiguratorComponent.prototype.load = function () {
-        var _this = this;
-        this.dataService.getSome().subscribe(function (data) { return _this.models = data; });
+    AutoConfiguratorComponent.prototype.save = function () {
+        var car = new Car(0, this.selectedModel.id, this.selectedEngine.id, this.selectedTransmission.id, this.selectedSuspension.id, Color[this.selectedColor], this.cost);
+        console.log(car);
+        this.dataService.saveCar(car).subscribe(function (data) { return car = data; });
     };
     AutoConfiguratorComponent.prototype.selectedModelMessage = function ($event) {
         this.selectedModel = $event;
         this.setImgSrc();
+        this.CalculateCost();
     };
     AutoConfiguratorComponent.prototype.selectedBrandMessage = function ($event) {
         this.selectedBrand = $event;
+        this.selectedModel = new Model();
+        this.setImgSrc();
+    };
+    AutoConfiguratorComponent.prototype.selectedEngineMessage = function ($event) {
+        this.selectedEngine = $event;
+        this.CalculateCost();
+    };
+    AutoConfiguratorComponent.prototype.selectedSuspensionMessage = function ($event) {
+        this.selectedSuspension = $event;
+        this.CalculateCost();
+    };
+    AutoConfiguratorComponent.prototype.selectedTransmissionMessage = function ($event) {
+        this.selectedTransmission = $event;
+        this.CalculateCost();
+    };
+    AutoConfiguratorComponent.prototype.colorSelected = function () {
+        this.setImgSrc();
     };
     AutoConfiguratorComponent.prototype.setImgSrc = function () {
-        this.imgSrc = 'imgs\\' + this.selectedBrand.name + '\\' + this.selectedModel.name + '\\' + this.selectedColor + '.png';
+        if (this.selectedModel.name != undefined && this.selectedColor != null) {
+            this.imgSrc = 'imgs\\cars\\' + this.selectedBrand.name + '\\' + this.selectedModel.name + '\\' + this.selectedColor + '.png';
+        }
+    };
+    AutoConfiguratorComponent.prototype.CalculateCost = function () {
+        this.cost = this.selectedModel.baseCost + this.selectedEngine.cost + this.selectedSuspension.cost + this.selectedTransmission.cost;
     };
     AutoConfiguratorComponent = __decorate([
         Component({

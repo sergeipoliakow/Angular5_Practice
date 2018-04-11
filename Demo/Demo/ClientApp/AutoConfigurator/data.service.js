@@ -14,8 +14,9 @@ var DataService = /** @class */ (function () {
         this.http = http;
         this.url = "/api/configurator";
     }
-    DataService.prototype.getSome = function () {
-        return this.http.get(this.url);
+    DataService.prototype.saveCar = function (car) {
+        console.log(car);
+        return this.http.post(this.url, car);
     };
     DataService = __decorate([
         Injectable(),
